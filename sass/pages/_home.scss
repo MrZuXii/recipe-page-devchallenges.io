@@ -1,0 +1,102 @@
+.main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  row-gap: 4.8rem;
+  padding-top: 4.8rem;
+
+  @include respond(medium) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-ingredients {
+  grid-column: 1;
+  grid-row: 1;
+
+  @include respond(medium) {
+    grid-row: 2;
+  }
+}
+.section-instructions {
+  grid-column: 1;
+}
+
+.source {
+  grid-column: 1;
+}
+
+.ingredient,
+.instruction {
+  list-style: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $default-font-size;
+  color: var(--color-gray-1);
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    gap: 1.7rem;
+    align-items: flex-start;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.ingredient {
+  gap: 1rem;
+  line-height: 2.5rem;
+
+  &__item {
+    & span {
+      font-weight: 500;
+      font-style: italic;
+    }
+    &::before {
+      width: 2.1rem;
+      height: 2.1rem;
+      border: 1px solid var(--color-gray-3);
+      border-radius: 0.4rem;
+    }
+  }
+}
+
+.instruction {
+  padding-top: 2.8rem;
+  counter-reset: list-number;
+  gap: 2rem;
+  line-height: 150%;
+  &__item {
+    &::before {
+      counter-increment: list-number;
+      content: counter(list-number);
+      height: 3.6rem;
+      width: 3.6rem;
+      background: var(--color-orange);
+      border-radius: 0.6rem;
+      text-align: center;
+      line-height: 3rem;
+      font-family: "Playfair Display";
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: var(--color-white);
+    }
+  }
+}
+
+.source {
+  font-style: italic;
+  font-size: $default-font-size;
+  line-height: 150%;
+  color: var(--color-gray-4);
+  & a:link,
+  & a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}

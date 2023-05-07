@@ -1,0 +1,23 @@
+.header {
+  margin-top: 5.2rem;
+  &__photo {
+    width: 100%;
+  }
+
+  &__description {
+    display: flex;
+    gap: 1.2rem;
+    align-items: baseline;
+    margin-bottom: 4.5rem;
+  }
+
+  &__text {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    max-width: 58rem;
+    display: inline-block;
+    color: var(--color-gray-2);
+  }
+}

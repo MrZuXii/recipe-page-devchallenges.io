@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-1: #333;
+  --color-gray-2: #4f4f4f;
+  --color-gray-3: #828282;
+  --color-gray-4: #bdbdbd;
+  --color-gray-5: #fafafa;
+  --color-orange: #f2994a;
+}
+
+$default-font-size: 1.6rem;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == low {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == medium {
+    @media only screen and (max-width: 50em) {
+      @content;
+    } //800px
+  }
+  @if $breakpoint == high {
+    @media only screen and (min-width: 62.5em) {
+      @content;
+    } //1000
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(high) {
+    font-size: 56.25%;
+  }
+
+  @include respond(low) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background: var(--color-gray-5);
+  font-family: "Montserrat";
+}

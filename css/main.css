@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap");
+.container {
+  max-width: 97rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-1: #333;
+  --color-gray-2: #4f4f4f;
+  --color-gray-3: #828282;
+  --color-gray-4: #bdbdbd;
+  --color-gray-5: #fafafa;
+  --color-orange: #f2994a;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 62.5em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: var(--color-gray-5);
+  font-family: "Montserrat";
+}
+
+.heading-primary {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.8rem;
+  margin-bottom: 1.2rem;
+  /* identical to box height */
+  color: var(--color-black);
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-primary {
+    font-size: 4rem;
+  }
+}
+
+.heading-secondary {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--color-gray-1);
+}
+
+.heading-tertiary {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.8rem;
+  padding: 3.2rem 0;
+  color: var(--color-gray-1);
+}
+
+.header {
+  margin-top: 5.2rem;
+}
+.header__photo {
+  width: 100%;
+}
+.header__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.2rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 4.5rem;
+}
+.header__text {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  max-width: 58rem;
+  display: inline-block;
+  color: var(--color-gray-2);
+}
+
+.overview {
+  width: 216px;
+  height: 367px;
+  -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 1.2rem;
+  grid-column: 2;
+  justify-self: right;
+}
+@media only screen and (max-width: 50em) {
+  .overview {
+    width: auto;
+    height: auto;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: none;
+    grid-column: 1;
+    justify-self: auto;
+  }
+}
+.overview__list {
+  list-style: none;
+  padding: 6rem 4.2rem;
+}
+@media only screen and (max-width: 50em) {
+  .overview__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    grid-column: 1/4;
+    gap: 4rem;
+  }
+}
+.overview__list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.2rem;
+}
+@media only screen and (max-width: 50em) {
+  .overview__list__item:first-child {
+    grid-column: 1/4;
+  }
+}
+.overview__list__item:not(:last-child) {
+  margin-bottom: 4.3rem;
+}
+@media only screen and (max-width: 50em) {
+  .overview__list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+.overview__list__item__icon {
+  width: 2.9rem;
+  height: 2.9rem;
+  fill: var(--color-gray-2);
+}
+.overview__list__item__icon--yellow {
+  fill: var(--color-orange);
+}
+.overview__list__item__text p:first-child {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  color: var(--color-gray-4);
+}
+.overview__list__item__text p:last-child {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: var(--color-gray-1);
+}
+.overview__list__item__text--yellow p:last-child {
+  color: var(--color-orange);
+}
+
+.footer {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #333;
+  padding-bottom: 2.4rem;
+  padding-top: 9rem;
+  -webkit-animation: opacity 1.2s ease-in-out backwards;
+          animation: opacity 1.2s ease-in-out backwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.footer a:link,
+.footer a:visited {
+  font-weight: 700;
+  color: inherit;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  row-gap: 4.8rem;
+  padding-top: 4.8rem;
+}
+@media only screen and (max-width: 50em) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-ingredients {
+  grid-column: 1;
+  grid-row: 1;
+}
+@media only screen and (max-width: 50em) {
+  .section-ingredients {
+    grid-row: 2;
+  }
+}
+
+.section-instructions {
+  grid-column: 1;
+}
+
+.source {
+  grid-column: 1;
+}
+
+.ingredient,
+.instruction {
+  list-style: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--color-gray-1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.ingredient__item,
+.instruction__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.7rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.ingredient__item::before,
+.instruction__item::before {
+  content: "";
+  display: inline-block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.ingredient {
+  gap: 1rem;
+  line-height: 2.5rem;
+}
+.ingredient__item span {
+  font-weight: 500;
+  font-style: italic;
+}
+.ingredient__item::before {
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid var(--color-gray-3);
+  border-radius: 0.4rem;
+}
+
+.instruction {
+  padding-top: 2.8rem;
+  counter-reset: list-number;
+  gap: 2rem;
+  line-height: 150%;
+}
+.instruction__item::before {
+  counter-increment: list-number;
+  content: counter(list-number);
+  height: 3.6rem;
+  width: 3.6rem;
+  background: var(--color-orange);
+  border-radius: 0.6rem;
+  text-align: center;
+  line-height: 3rem;
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--color-white);
+}
+
+.source {
+  font-style: italic;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--color-gray-4);
+}
+.source a:link, .source a:visited {
+  color: inherit;
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */
